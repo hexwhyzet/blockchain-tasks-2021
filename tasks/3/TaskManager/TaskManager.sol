@@ -11,7 +11,7 @@ contract TaskManager {
 
     uint8 private tasksCreated;
     uint8 public openedTasks;
-    mapping(uint8 => Task) tasks;
+    mapping(uint8 => Task) private tasks;
 
     function push(string taskName) internal returns (uint8) {
         tasks[tasksCreated++] = Task(taskName, now, false, false);
@@ -71,7 +71,7 @@ contract TaskManager {
     }
 
     struct ListElement {
-        uint key;
+        uint8 key;
         string name;
     }
 
