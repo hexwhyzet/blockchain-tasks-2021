@@ -1,7 +1,7 @@
 pragma ton -solidity >= 0.35.0;
 pragma AbiHeader expire;
 
-import "./StringQueue.sol";
+import "./2_StringQueue.sol";
 
 contract ShopQueue {
     function addPerson(string name) public {
